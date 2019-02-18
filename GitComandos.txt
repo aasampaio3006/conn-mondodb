@@ -1,0 +1,49 @@
+
+
+##Como saber o que mudou nos arquivos?
+git diff v0.1 v0.2
+
+##indicar que essa pasta será um pasta do repositório
+git init 
+
+##Copiando o projeto para sua máquina: o comando clone 
+##Ao clonar um repositório, não precisamos adicionar o repositório remoto através do comando git remote add, pois tudo já é feito pelo comando git clone,
+git clone https://github.com/jcfonsecagit/repositorio.git
+
+##uma boa prática sempre trabalhar em uma branch local que não seja a master.
+git checkout -b desenvolvimento
+
+## passar alteraçoes branch desenvolvimento p branch master
+git checkout master
+
+###verificar o estado dos arquivos do nosso projeto:
+git status
+
+##Dizer ao Git que ele deve realizar o track, adicionar o arquivo ao repositório
+git add +nomedoarquivo ou --all para todos
+
+#gerando git "colocar descrição" //salvando no repositorio -m descrição do commit
+git commit -m "Alteraçao dos caminhos das pastas"
+
+
+##Envio dos commits locais para o repositório
+git push -u origin master
+
+##mostrar historico de commit
+git log 
+
+
+
+##############Branches######################
+##Trabalhando com branches:
+##verificar branch local
+git branch
+
+##visualizar as branches já existentes em um repositório remoto
+git branch -r
+
+## criar uma branch com nome design
+git branch design
+
+##alterar o projeto numa outra branch
+git checkout design
